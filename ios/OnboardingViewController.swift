@@ -9,14 +9,12 @@
 import UIKit
 
 class OnboardingViewController: UIViewController {
-
-  @IBOutlet weak var presentationImageView: UIImageView!
-  @IBOutlet weak var userTextField: UITextField!
-  @IBOutlet weak var passwordTextField: UITextField!
-  @IBOutlet weak var sesionButton: UIButton!
-  @IBOutlet weak var registerButton: UIButton!
   override func viewDidLoad() {
         super.viewDidLoad()
     }
 
+  @IBAction func registerViewAction(_ sender: Any) {
+    let vc = RegisterViewController()
+    self.present(vc, animated: true)
+  }
 }

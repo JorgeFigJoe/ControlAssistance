@@ -48,6 +48,9 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4YR-vQ-oQf">
                                     <rect key="frame" x="8" y="614" width="398" height="30"/>
                                     <state key="normal" title="¿No tienes cuenta? Registrate"/>
+                                    <connections>
+                                        <action selector="registerViewAction:" destination="-1" eventType="touchUpInside" id="hAp-8K-xAl"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
