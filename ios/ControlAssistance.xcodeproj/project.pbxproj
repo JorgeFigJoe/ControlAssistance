@@ -22,6 +22,8 @@
 		E1B194BAB9C177B2EEDDFB88 /* libPods-ControlAssistance-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB2239F3CFC0F4E1B93AB66F /* libPods-ControlAssistance-tvOSTests.a */; };
 		FD1459B623EF5A03001D3B26 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1459B423EF5A03001D3B26 /* OnboardingViewController.swift */; };
 		FD1459B723EF5A03001D3B26 /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1459B523EF5A03001D3B26 /* OnboardingViewController.xib */; };
+		FD1459BA23EF6019001D3B26 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1459B823EF6019001D3B26 /* RegisterViewController.swift */; };
+		FD1459BB23EF6019001D3B26 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1459B923EF6019001D3B26 /* RegisterViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		FD1459B323EF5A02001D3B26 /* ControlAssistance-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ControlAssistance-Bridging-Header.h"; sourceTree = "<group>"; };
 		FD1459B423EF5A03001D3B26 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		FD1459B523EF5A03001D3B26 /* OnboardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
+		FD1459B823EF6019001D3B26 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		FD1459B923EF6019001D3B26 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +144,8 @@
 				FD1459B423EF5A03001D3B26 /* OnboardingViewController.swift */,
 				FD1459B523EF5A03001D3B26 /* OnboardingViewController.xib */,
 				FD1459B323EF5A02001D3B26 /* ControlAssistance-Bridging-Header.h */,
+				FD1459B823EF6019001D3B26 /* RegisterViewController.swift */,
+				FD1459B923EF6019001D3B26 /* RegisterViewController.xib */,
 			);
 			name = ControlAssistance;
 			sourceTree = "<group>";
@@ -351,6 +357,7 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				FD1459B723EF5A03001D3B26 /* OnboardingViewController.xib in Resources */,
+				FD1459BB23EF6019001D3B26 /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +551,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				FD1459B623EF5A03001D3B26 /* OnboardingViewController.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				FD1459BA23EF6019001D3B26 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
