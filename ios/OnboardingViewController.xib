@@ -56,19 +56,24 @@
                             <constraints>
                                 <constraint firstItem="4YR-vQ-oQf" firstAttribute="top" secondItem="Orl-TK-fKr" secondAttribute="bottom" constant="20" id="0xU-32-Xfo"/>
                                 <constraint firstAttribute="trailing" secondItem="YaN-BI-gOu" secondAttribute="trailing" constant="8" id="2MP-ZA-BnM"/>
+                                <constraint firstItem="yJ7-Gc-AHl" firstAttribute="centerX" secondItem="xj9-ZA-KU8" secondAttribute="centerX" id="3yn-Ta-TI4"/>
                                 <constraint firstItem="YaN-BI-gOu" firstAttribute="top" secondItem="yJ7-Gc-AHl" secondAttribute="bottom" constant="28" id="4cc-tE-dIF"/>
                                 <constraint firstItem="Orl-TK-fKr" firstAttribute="top" secondItem="YaN-BI-gOu" secondAttribute="bottom" constant="38" id="4mW-Fq-837"/>
+                                <constraint firstItem="4YR-vQ-oQf" firstAttribute="centerX" secondItem="xj9-ZA-KU8" secondAttribute="centerX" id="8BS-Xd-YPe"/>
                                 <constraint firstAttribute="bottom" secondItem="4YR-vQ-oQf" secondAttribute="bottom" constant="158" id="BjT-Fv-w4C"/>
                                 <constraint firstItem="sWu-Hp-3gj" firstAttribute="leading" secondItem="xj9-ZA-KU8" secondAttribute="leading" constant="37" id="HBu-lg-PC6"/>
                                 <constraint firstItem="yJ7-Gc-AHl" firstAttribute="top" secondItem="sWu-Hp-3gj" secondAttribute="bottom" constant="71" id="M41-hn-q56"/>
                                 <constraint firstItem="YaN-BI-gOu" firstAttribute="leading" secondItem="xj9-ZA-KU8" secondAttribute="leading" constant="8" id="P4s-dh-Ast"/>
+                                <constraint firstItem="sWu-Hp-3gj" firstAttribute="centerX" secondItem="xj9-ZA-KU8" secondAttribute="centerX" id="Pcc-Zz-wM7"/>
                                 <constraint firstAttribute="trailing" secondItem="yJ7-Gc-AHl" secondAttribute="trailing" constant="8" id="RBk-kg-4E6"/>
                                 <constraint firstItem="Orl-TK-fKr" firstAttribute="leading" secondItem="xj9-ZA-KU8" secondAttribute="leading" constant="8" id="SBP-cr-dKP"/>
                                 <constraint firstAttribute="trailing" secondItem="sWu-Hp-3gj" secondAttribute="trailing" constant="37" id="Tbq-gm-C3C"/>
                                 <constraint firstAttribute="trailing" secondItem="Orl-TK-fKr" secondAttribute="trailing" constant="8" id="VzM-7R-1v4"/>
                                 <constraint firstItem="sWu-Hp-3gj" firstAttribute="top" secondItem="IKk-0B-1aY" secondAttribute="top" constant="63" id="ZOX-1l-UgT"/>
+                                <constraint firstItem="YaN-BI-gOu" firstAttribute="centerX" secondItem="xj9-ZA-KU8" secondAttribute="centerX" id="jyO-g4-jJk"/>
                                 <constraint firstItem="yJ7-Gc-AHl" firstAttribute="leading" secondItem="xj9-ZA-KU8" secondAttribute="leading" constant="8" id="mxQ-O2-wns"/>
                                 <constraint firstItem="4YR-vQ-oQf" firstAttribute="leading" secondItem="xj9-ZA-KU8" secondAttribute="leading" constant="8" id="ng1-lg-Ea6"/>
+                                <constraint firstItem="Orl-TK-fKr" firstAttribute="centerX" secondItem="xj9-ZA-KU8" secondAttribute="centerX" id="z57-aj-PaZ"/>
                                 <constraint firstAttribute="trailing" secondItem="4YR-vQ-oQf" secondAttribute="trailing" constant="8" id="zCr-CE-MDY"/>
                             </constraints>
                             <viewLayoutGuide key="contentLayoutGuide" id="fUM-67-AoZ"/>
