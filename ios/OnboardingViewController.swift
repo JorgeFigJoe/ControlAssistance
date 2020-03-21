@@ -11,6 +11,7 @@ import UIKit
 class OnboardingViewController: UIViewController {
   override func viewDidLoad() {
         super.viewDidLoad()
+    AssistanceDBModel.shared.createDB()
     }
 
   @IBAction func registerViewAction(_ sender: Any) {

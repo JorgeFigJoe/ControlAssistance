@@ -13,9 +13,10 @@ class AssistanceDBModel {
     static let shared : AssistanceDBModel = AssistanceDBModel()
     var database : Connection!
     let assistanceTable = Table("ASSISTANCEDB")
-    let id = Expression<Int>("id")
+    //let id = Expression<Int>("id")
     let name = Expression<String>("name")
     let company = Expression<String>("company")
+    let password = Expression<String>("password")
     let model = Expression<AssistanceModel>("model")
     
    
@@ -33,9 +34,10 @@ class AssistanceDBModel {
     
     private func createTableDB(){
         let createTable = self.assistanceTable.create{(tabledb) in
-            tabledb.column(self.id, primaryKey: true)
-            tabledb.column(self.name)
+            //tabledb.column(self.id, primaryKey: true)
+            tabledb.column(self.name, primaryKey: true)
             tabledb.column(self.company)
+          tabledb.column(self.password)
 
         }
         
@@ -48,8 +50,8 @@ class AssistanceDBModel {
         
     }
     
-    func insertDatesToDBModel(getId: Int,getName : String, getCompany : String){
-        let insertPokemon = self.assistanceTable.insert(self.id <- getId, self.name <- getName, self.company <- getCompany)
+  func insertDatesToDBModel(getName : String, getCompany : String, getPass : String){
+    let insertPokemon = self.assistanceTable.insert(self.name <- getName, self.company <- getCompany, self.password <- getPass)
         do{
             try self.database.run(insertPokemon)
             print("inserted dates successful")
@@ -63,7 +65,7 @@ class AssistanceDBModel {
         do{
             let pokemon = try self.database.prepare(self.assistanceTable)
             for item in pokemon{
-                print("pokemon: \(item[self.id]), name:  \(item[self.name]), company: \(item[self.company])")
+              print("pokemon: \(item[self.password]), name:  \(item[self.name]), company: \(item[self.company])")
                 //array.append(contentsOf: [item[self.id],item[self.name],item[self.url]])
                 array.append(contentsOf: [item[self.name]])
             }

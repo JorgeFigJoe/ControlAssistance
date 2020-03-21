@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="ControlAssistance" customModuleProvider="target">
             <connections>
+                <outlet property="companyTextField" destination="3xk-jI-B15" id="Hs4-7w-9LQ"/>
+                <outlet property="numUsuarioTextField" destination="qQZ-84-ZhV" id="WrC-AB-xaP"/>
+                <outlet property="passwordTextField" destination="aZU-Oo-PIP" id="9YB-2D-2Ul"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -32,7 +35,7 @@
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nueva contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aZU-Oo-PIP">
                                     <rect key="frame" x="8" y="172" width="398" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Empresa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3xk-jI-B15">
                                     <rect key="frame" x="8" y="228" width="398" height="34"/>
@@ -42,6 +45,9 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgL-pb-6Yy">
                                     <rect key="frame" x="8" y="288" width="398" height="30"/>
                                     <state key="normal" title="Crear cuenta"/>
+                                    <connections>
+                                        <action selector="createAccountButton:" destination="-1" eventType="touchUpInside" id="3RD-S8-QAy"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
