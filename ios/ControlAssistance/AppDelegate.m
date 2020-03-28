@@ -11,6 +11,8 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 #import "ControlAssistance-Swift.h"
+@import GoogleMaps;
+@import GooglePlaces;
 
 @implementation AppDelegate
 
@@ -28,6 +30,9 @@
 //  rootViewController.view = rootView;
 //  self.window.rootViewController = rootViewController;
 //  [self.window makeKeyAndVisible];
+  
+  [GMSServices provideAPIKey:@"AIzaSyBYFoLdPfdPlDOrelWbD07KKkifaep6Eus"];
+  [GMSPlacesClient provideAPIKey:@"AIzaSyBYFoLdPfdPlDOrelWbD07KKkifaep6Eus"];
   
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   OnboardingViewController *mainVC = [[OnboardingViewController alloc] initWithNibName:@"OnboardingViewController" bundle:nil];

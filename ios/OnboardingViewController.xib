@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,6 +45,9 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Orl-TK-fKr">
                                     <rect key="frame" x="8" y="564" width="398" height="30"/>
                                     <state key="normal" title="Iniciar Sesión"/>
+                                    <connections>
+                                        <action selector="openMapViewButton:" destination="-1" eventType="touchUpInside" id="je9-y7-O6X"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4YR-vQ-oQf">
                                     <rect key="frame" x="8" y="614" width="398" height="30"/>
@@ -70,15 +73,13 @@
                                 <constraint firstItem="Orl-TK-fKr" firstAttribute="leading" secondItem="xj9-ZA-KU8" secondAttribute="leading" constant="8" id="SBP-cr-dKP"/>
                                 <constraint firstAttribute="trailing" secondItem="sWu-Hp-3gj" secondAttribute="trailing" constant="37" id="Tbq-gm-C3C"/>
                                 <constraint firstAttribute="trailing" secondItem="Orl-TK-fKr" secondAttribute="trailing" constant="8" id="VzM-7R-1v4"/>
-                                <constraint firstItem="sWu-Hp-3gj" firstAttribute="top" secondItem="IKk-0B-1aY" secondAttribute="top" constant="63" id="ZOX-1l-UgT"/>
+                                <constraint firstItem="sWu-Hp-3gj" firstAttribute="top" secondItem="xj9-ZA-KU8" secondAttribute="top" constant="63" id="ZOX-1l-UgT"/>
                                 <constraint firstItem="YaN-BI-gOu" firstAttribute="centerX" secondItem="xj9-ZA-KU8" secondAttribute="centerX" id="jyO-g4-jJk"/>
                                 <constraint firstItem="yJ7-Gc-AHl" firstAttribute="leading" secondItem="xj9-ZA-KU8" secondAttribute="leading" constant="8" id="mxQ-O2-wns"/>
                                 <constraint firstItem="4YR-vQ-oQf" firstAttribute="leading" secondItem="xj9-ZA-KU8" secondAttribute="leading" constant="8" id="ng1-lg-Ea6"/>
                                 <constraint firstItem="Orl-TK-fKr" firstAttribute="centerX" secondItem="xj9-ZA-KU8" secondAttribute="centerX" id="z57-aj-PaZ"/>
                                 <constraint firstAttribute="trailing" secondItem="4YR-vQ-oQf" secondAttribute="trailing" constant="8" id="zCr-CE-MDY"/>
                             </constraints>
-                            <viewLayoutGuide key="contentLayoutGuide" id="fUM-67-AoZ"/>
-                            <viewLayoutGuide key="frameLayoutGuide" id="IKk-0B-1aY"/>
                         </scrollView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -106,6 +107,6 @@
         </view>
     </objects>
     <resources>
-        <image name="square.and.pencil" catalog="system" width="64" height="58"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="118"/>
     </resources>
 </document>

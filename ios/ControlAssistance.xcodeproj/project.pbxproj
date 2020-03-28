@@ -26,6 +26,8 @@
 		FD1459BB23EF6019001D3B26 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1459B923EF6019001D3B26 /* RegisterViewController.xib */; };
 		FD95F582241C8FBA00883CCA /* AssistanceDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD95F581241C8FBA00883CCA /* AssistanceDBModel.swift */; };
 		FD95F585241C916400883CCA /* AssistanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD95F584241C916400883CCA /* AssistanceModel.swift */; };
+		FDEC98AA242F0CEA00A36815 /* ControlMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC98A8242F0CEA00A36815 /* ControlMapViewController.swift */; };
+		FDEC98AB242F0CEA00A36815 /* ControlMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDEC98A9242F0CEA00A36815 /* ControlMapViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		FD1459B923EF6019001D3B26 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		FD95F581241C8FBA00883CCA /* AssistanceDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistanceDBModel.swift; sourceTree = "<group>"; };
 		FD95F584241C916400883CCA /* AssistanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistanceModel.swift; sourceTree = "<group>"; };
+		FDEC98A8242F0CEA00A36815 /* ControlMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMapViewController.swift; sourceTree = "<group>"; };
+		FDEC98A9242F0CEA00A36815 /* ControlMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ControlMapViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,8 @@
 				FD1459B323EF5A02001D3B26 /* ControlAssistance-Bridging-Header.h */,
 				FD1459B823EF6019001D3B26 /* RegisterViewController.swift */,
 				FD1459B923EF6019001D3B26 /* RegisterViewController.xib */,
+				FDEC98A8242F0CEA00A36815 /* ControlMapViewController.swift */,
+				FDEC98A9242F0CEA00A36815 /* ControlMapViewController.xib */,
 			);
 			name = ControlAssistance;
 			sourceTree = "<group>";
@@ -265,6 +271,7 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				01A8F956EECBD54D821306BF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -377,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				FDEC98AB242F0CEA00A36815 /* ControlMapViewController.xib in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				FD1459B723EF5A03001D3B26 /* OnboardingViewController.xib in Resources */,
 				FD1459BB23EF6019001D3B26 /* RegisterViewController.xib in Resources */,
@@ -414,6 +422,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		01A8F956EECBD54D821306BF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ControlAssistance/Pods-ControlAssistance-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ControlAssistance/Pods-ControlAssistance-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -572,6 +600,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				FD1459B623EF5A03001D3B26 /* OnboardingViewController.swift in Sources */,
+				FDEC98AA242F0CEA00A36815 /* ControlMapViewController.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				FD95F585241C916400883CCA /* AssistanceModel.swift in Sources */,
 				FD1459BA23EF6019001D3B26 /* RegisterViewController.swift in Sources */,

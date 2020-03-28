@@ -16,12 +16,16 @@ class OnboardingViewController: UIViewController {
     }
   
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-    let rect = CGRect(origin: CGPoint.zero, size: size)
     self.viewScrollView.contentSize = size
   }
 
   @IBAction func registerViewAction(_ sender: Any) {
     let vc = RegisterViewController()
+    self.present(vc, animated: true)
+  }
+  @IBAction func openMapViewButton(_ sender: Any) {
+    let vc = ControlMapViewController()
+    vc.modalPresentationStyle = .fullScreen
     self.present(vc, animated: true)
   }
 }

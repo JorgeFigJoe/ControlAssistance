@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,22 +28,22 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nuevo usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qQZ-84-ZhV">
-                                    <rect key="frame" x="8" y="110" width="398" height="34"/>
+                                    <rect key="frame" x="8" y="110" width="145" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nueva contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aZU-Oo-PIP">
-                                    <rect key="frame" x="8" y="172" width="398" height="34"/>
+                                    <rect key="frame" x="8" y="172" width="145" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Empresa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3xk-jI-B15">
-                                    <rect key="frame" x="8" y="228" width="398" height="34"/>
+                                    <rect key="frame" x="8" y="228" width="145" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgL-pb-6Yy">
-                                    <rect key="frame" x="8" y="288" width="398" height="30"/>
+                                    <rect key="frame" x="8" y="288" width="145" height="30"/>
                                     <state key="normal" title="Crear cuenta"/>
                                     <connections>
                                         <action selector="createAccountButton:" destination="-1" eventType="touchUpInside" id="3RD-S8-QAy"/>
@@ -51,21 +51,19 @@
                                 </button>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="qQZ-84-ZhV" firstAttribute="leading" secondItem="phB-kx-efp" secondAttribute="leading" constant="8" id="4hb-rT-8BN"/>
-                                <constraint firstItem="IgL-pb-6Yy" firstAttribute="leading" secondItem="phB-kx-efp" secondAttribute="leading" constant="8" id="5uw-Fn-YWf"/>
+                                <constraint firstItem="qQZ-84-ZhV" firstAttribute="leading" secondItem="9wz-xH-YpI" secondAttribute="leading" constant="8" id="4hb-rT-8BN"/>
+                                <constraint firstItem="IgL-pb-6Yy" firstAttribute="leading" secondItem="9wz-xH-YpI" secondAttribute="leading" constant="8" id="5uw-Fn-YWf"/>
                                 <constraint firstItem="3xk-jI-B15" firstAttribute="top" secondItem="aZU-Oo-PIP" secondAttribute="bottom" constant="22" id="6nB-ft-BHR"/>
-                                <constraint firstItem="phB-kx-efp" firstAttribute="trailing" secondItem="aZU-Oo-PIP" secondAttribute="trailing" constant="8" id="E9t-iP-F9Z"/>
-                                <constraint firstItem="phB-kx-efp" firstAttribute="trailing" secondItem="3xk-jI-B15" secondAttribute="trailing" constant="8" id="JmB-z8-bCd"/>
-                                <constraint firstItem="phB-kx-efp" firstAttribute="trailing" secondItem="qQZ-84-ZhV" secondAttribute="trailing" constant="8" id="OAs-aY-nms"/>
+                                <constraint firstAttribute="trailing" secondItem="aZU-Oo-PIP" secondAttribute="trailing" constant="8" id="E9t-iP-F9Z"/>
+                                <constraint firstAttribute="trailing" secondItem="3xk-jI-B15" secondAttribute="trailing" constant="8" id="JmB-z8-bCd"/>
+                                <constraint firstAttribute="trailing" secondItem="qQZ-84-ZhV" secondAttribute="trailing" constant="8" id="OAs-aY-nms"/>
                                 <constraint firstItem="aZU-Oo-PIP" firstAttribute="top" secondItem="qQZ-84-ZhV" secondAttribute="bottom" constant="28" id="OBC-XD-3sE"/>
-                                <constraint firstItem="phB-kx-efp" firstAttribute="trailing" secondItem="IgL-pb-6Yy" secondAttribute="trailing" constant="8" id="Wat-yw-CUs"/>
-                                <constraint firstItem="aZU-Oo-PIP" firstAttribute="leading" secondItem="phB-kx-efp" secondAttribute="leading" constant="8" id="dxD-J9-D9B"/>
+                                <constraint firstAttribute="trailing" secondItem="IgL-pb-6Yy" secondAttribute="trailing" constant="8" id="Wat-yw-CUs"/>
+                                <constraint firstItem="aZU-Oo-PIP" firstAttribute="leading" secondItem="9wz-xH-YpI" secondAttribute="leading" constant="8" id="dxD-J9-D9B"/>
                                 <constraint firstItem="IgL-pb-6Yy" firstAttribute="top" secondItem="3xk-jI-B15" secondAttribute="bottom" constant="26" id="jTf-Ct-IQD"/>
-                                <constraint firstItem="qQZ-84-ZhV" firstAttribute="top" secondItem="phB-kx-efp" secondAttribute="top" constant="110" id="lpE-Gf-K9M"/>
-                                <constraint firstItem="3xk-jI-B15" firstAttribute="leading" secondItem="phB-kx-efp" secondAttribute="leading" constant="8" id="uc1-3o-iWS"/>
+                                <constraint firstItem="qQZ-84-ZhV" firstAttribute="top" secondItem="9wz-xH-YpI" secondAttribute="top" constant="110" id="lpE-Gf-K9M"/>
+                                <constraint firstItem="3xk-jI-B15" firstAttribute="leading" secondItem="9wz-xH-YpI" secondAttribute="leading" constant="8" id="uc1-3o-iWS"/>
                             </constraints>
-                            <viewLayoutGuide key="contentLayoutGuide" id="lFo-Hz-b2q"/>
-                            <viewLayoutGuide key="frameLayoutGuide" id="phB-kx-efp"/>
                         </scrollView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
