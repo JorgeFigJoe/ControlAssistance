@@ -13,10 +13,30 @@ class OnboardingViewController: UIViewController {
   override func viewDidLoad() {
         super.viewDidLoad()
     AssistanceDBModel.shared.createDB()
+    NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    NotificationCenter.default.removeObserver(self)
+  }
   
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
     self.viewScrollView.contentSize = size
+  }
+  
+  @objc func keyboardWillShow(notification: NSNotification) {
+      if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+          if self.view.frame.origin.y == 0 {
+              self.view.frame.origin.y -= keyboardSize.height
+          }
+      }
+  }
+
+  @objc func keyboardWillHide(notification: NSNotification) {
+      if self.view.frame.origin.y != 0 {
+          self.view.frame.origin.y = 0
+      }
   }
 
   @IBAction func registerViewAction(_ sender: Any) {
