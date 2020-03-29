@@ -24,6 +24,7 @@
 		FD1459B723EF5A03001D3B26 /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1459B523EF5A03001D3B26 /* OnboardingViewController.xib */; };
 		FD1459BA23EF6019001D3B26 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1459B823EF6019001D3B26 /* RegisterViewController.swift */; };
 		FD1459BB23EF6019001D3B26 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1459B923EF6019001D3B26 /* RegisterViewController.xib */; };
+		FD63C08E2430200F00C0024C /* viewControllerPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD63C08D2430200F00C0024C /* viewControllerPlus.swift */; };
 		FD95F582241C8FBA00883CCA /* AssistanceDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD95F581241C8FBA00883CCA /* AssistanceDBModel.swift */; };
 		FD95F585241C916400883CCA /* AssistanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD95F584241C916400883CCA /* AssistanceModel.swift */; };
 		FDEC98AA242F0CEA00A36815 /* ControlMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC98A8242F0CEA00A36815 /* ControlMapViewController.swift */; };
@@ -80,6 +81,7 @@
 		FD1459B523EF5A03001D3B26 /* OnboardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
 		FD1459B823EF6019001D3B26 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		FD1459B923EF6019001D3B26 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		FD63C08D2430200F00C0024C /* viewControllerPlus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewControllerPlus.swift; sourceTree = "<group>"; };
 		FD95F581241C8FBA00883CCA /* AssistanceDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistanceDBModel.swift; sourceTree = "<group>"; };
 		FD95F584241C916400883CCA /* AssistanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistanceModel.swift; sourceTree = "<group>"; };
 		FDEC98A8242F0CEA00A36815 /* ControlMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMapViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		13B07FAE1A68108700A75B9A /* ControlAssistance */ = {
 			isa = PBXGroup;
 			children = (
+				FD63C08C24301FED00C0024C /* Utils */,
 				FD95F583241C915600883CCA /* Model */,
 				FD95F580241C8F9900883CCA /* DBModel */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -221,6 +224,14 @@
 				7B34829E32D2E62E9CA21458 /* Pods-ControlAssistanceTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FD63C08C24301FED00C0024C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FD63C08D2430200F00C0024C /* viewControllerPlus.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		FD95F580241C8F9900883CCA /* DBModel */ = {
@@ -604,6 +615,7 @@
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				FD95F585241C916400883CCA /* AssistanceModel.swift in Sources */,
 				FD1459BA23EF6019001D3B26 /* RegisterViewController.swift in Sources */,
+				FD63C08E2430200F00C0024C /* viewControllerPlus.swift in Sources */,
 				FD95F582241C8FBA00883CCA /* AssistanceDBModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

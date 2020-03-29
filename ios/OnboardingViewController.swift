@@ -12,6 +12,7 @@ class OnboardingViewController: UIViewController {
   @IBOutlet weak var viewScrollView: UIScrollView!
   override func viewDidLoad() {
         super.viewDidLoad()
+    self.hideKeyboardWhenTappedAround()
     AssistanceDBModel.shared.createDB()
     NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
