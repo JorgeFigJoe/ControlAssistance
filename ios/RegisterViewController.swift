@@ -15,6 +15,7 @@ class RegisterViewController: UIViewController {
   @IBOutlet weak var companyTextField: UITextField!
   override func viewDidLoad() {
         super.viewDidLoad()
+    self.hideKeyboardWhenTappedAround()
 
     }
   
