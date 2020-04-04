@@ -49,9 +49,12 @@
                                         <action selector="createAccountButton:" destination="-1" eventType="touchUpInside" id="3RD-S8-QAy"/>
                                     </connections>
                                 </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkD-i5-WPg">
+                                    <rect key="frame" x="123" y="362" width="168" height="30"/>
+                                    <state key="normal" title="Salir"/>
+                                </button>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="IgL-pb-6Yy" secondAttribute="bottom" constant="52" id="5R8-y3-Vx7"/>
                                 <constraint firstItem="3xk-jI-B15" firstAttribute="leading" secondItem="9wz-xH-YpI" secondAttribute="leading" constant="8" id="Cll-tc-jAy"/>
                                 <constraint firstItem="3xk-jI-B15" firstAttribute="leading" secondItem="9wz-xH-YpI" secondAttribute="leading" constant="8" id="F6g-Ru-QA1"/>
                                 <constraint firstItem="aZU-Oo-PIP" firstAttribute="centerX" secondItem="9wz-xH-YpI" secondAttribute="centerX" id="FQO-hT-MBb"/>
@@ -65,15 +68,20 @@
                                 <constraint firstItem="aZU-Oo-PIP" firstAttribute="leading" secondItem="9wz-xH-YpI" secondAttribute="leading" constant="8" id="Tpi-Mj-804"/>
                                 <constraint firstItem="IgL-pb-6Yy" firstAttribute="centerX" secondItem="9wz-xH-YpI" secondAttribute="centerX" id="U9Y-LA-CxV"/>
                                 <constraint firstItem="aZU-Oo-PIP" firstAttribute="top" secondItem="qQZ-84-ZhV" secondAttribute="bottom" constant="52" id="Yhp-A3-55M"/>
+                                <constraint firstAttribute="bottom" secondItem="hkD-i5-WPg" secondAttribute="bottom" constant="14" id="b1T-4p-xUW"/>
                                 <constraint firstItem="qQZ-84-ZhV" firstAttribute="centerX" secondItem="9wz-xH-YpI" secondAttribute="centerX" id="dN5-DJ-ZBo"/>
                                 <constraint firstItem="IgL-pb-6Yy" firstAttribute="top" secondItem="3xk-jI-B15" secondAttribute="bottom" constant="32" id="fN6-kb-kYw"/>
+                                <constraint firstItem="hkD-i5-WPg" firstAttribute="top" secondItem="IgL-pb-6Yy" secondAttribute="bottom" constant="8" id="gn0-rV-SA5"/>
                                 <constraint firstAttribute="trailing" secondItem="qQZ-84-ZhV" secondAttribute="trailing" constant="8" id="hra-xl-iJE"/>
                                 <constraint firstAttribute="trailing" secondItem="aZU-Oo-PIP" secondAttribute="trailing" constant="8" id="lry-du-Bzg"/>
+                                <constraint firstAttribute="trailing" secondItem="hkD-i5-WPg" secondAttribute="trailing" constant="123" id="m9i-ne-Iah"/>
+                                <constraint firstItem="hkD-i5-WPg" firstAttribute="leading" secondItem="9wz-xH-YpI" secondAttribute="leading" constant="123" id="rHz-z4-hLR"/>
                                 <constraint firstAttribute="trailing" secondItem="qQZ-84-ZhV" secondAttribute="trailing" constant="8" id="sXl-V9-OOk"/>
                                 <constraint firstAttribute="trailing" secondItem="3xk-jI-B15" secondAttribute="trailing" constant="8" id="uR9-dA-thh"/>
                                 <constraint firstAttribute="trailing" secondItem="IgL-pb-6Yy" secondAttribute="trailing" constant="126" id="wG3-64-QdV"/>
                                 <constraint firstItem="qQZ-84-ZhV" firstAttribute="leading" secondItem="9wz-xH-YpI" secondAttribute="leading" constant="8" id="ye4-a2-hAL"/>
                                 <constraint firstItem="qQZ-84-ZhV" firstAttribute="leading" secondItem="9wz-xH-YpI" secondAttribute="leading" constant="8" id="ytw-DN-KNO"/>
+                                <constraint firstItem="hkD-i5-WPg" firstAttribute="centerX" secondItem="9wz-xH-YpI" secondAttribute="centerX" id="z18-tC-QBh"/>
                             </constraints>
                         </scrollView>
                     </subviews>
