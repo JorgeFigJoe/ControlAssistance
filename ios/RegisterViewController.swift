@@ -27,4 +27,7 @@ class RegisterViewController: UIViewController {
     AssistanceDBModel.shared.insertDatesToDBModel(getName: name, getCompany: company, getPass: password)
     self.dismiss(animated: true, completion: nil)
   }
+  @IBAction func exitButtonAction(_ sender: Any) {
+    self.dismiss(animated: true, completion: nil)
+  }
 }
