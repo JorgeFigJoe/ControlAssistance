@@ -25,6 +25,7 @@
 		FD1459BA23EF6019001D3B26 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1459B823EF6019001D3B26 /* RegisterViewController.swift */; };
 		FD1459BB23EF6019001D3B26 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1459B923EF6019001D3B26 /* RegisterViewController.xib */; };
 		FD63C08E2430200F00C0024C /* viewControllerPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD63C08D2430200F00C0024C /* viewControllerPlus.swift */; };
+		FD84BFD12456307100977AFC /* ControlAssistanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD84BFD02456307100977AFC /* ControlAssistanceUITests.swift */; };
 		FD95F582241C8FBA00883CCA /* AssistanceDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD95F581241C8FBA00883CCA /* AssistanceDBModel.swift */; };
 		FD95F585241C916400883CCA /* AssistanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD95F584241C916400883CCA /* AssistanceModel.swift */; };
 		FDEC98AA242F0CEA00A36815 /* ControlMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC98A8242F0CEA00A36815 /* ControlMapViewController.swift */; };
@@ -45,6 +46,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "ControlAssistance-tvOS";
+		};
+		FD84BFD32456307100977AFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
+			remoteInfo = ControlAssistance;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -82,6 +90,9 @@
 		FD1459B823EF6019001D3B26 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		FD1459B923EF6019001D3B26 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		FD63C08D2430200F00C0024C /* viewControllerPlus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewControllerPlus.swift; sourceTree = "<group>"; };
+		FD84BFCE2456307100977AFC /* ControlAssistanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControlAssistanceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD84BFD02456307100977AFC /* ControlAssistanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlAssistanceUITests.swift; sourceTree = "<group>"; };
+		FD84BFD22456307100977AFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD95F581241C8FBA00883CCA /* AssistanceDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistanceDBModel.swift; sourceTree = "<group>"; };
 		FD95F584241C916400883CCA /* AssistanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistanceModel.swift; sourceTree = "<group>"; };
 		FDEC98A8242F0CEA00A36815 /* ControlMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMapViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +129,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1B194BAB9C177B2EEDDFB88 /* libPods-ControlAssistance-tvOSTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD84BFCB2456307100977AFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +209,7 @@
 				13B07FAE1A68108700A75B9A /* ControlAssistance */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* ControlAssistanceTests */,
+				FD84BFCF2456307100977AFC /* ControlAssistanceUITests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				E0316EB50C11E4E3312D3C37 /* Pods */,
@@ -207,6 +226,7 @@
 				00E356EE1AD99517003FC87E /* ControlAssistanceTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* ControlAssistance-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* ControlAssistance-tvOSTests.xctest */,
+				FD84BFCE2456307100977AFC /* ControlAssistanceUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -232,6 +252,15 @@
 				FD63C08D2430200F00C0024C /* viewControllerPlus.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		FD84BFCF2456307100977AFC /* ControlAssistanceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FD84BFD02456307100977AFC /* ControlAssistanceUITests.swift */,
+				FD84BFD22456307100977AFC /* Info.plist */,
+			);
+			path = ControlAssistanceUITests;
 			sourceTree = "<group>";
 		};
 		FD95F580241C8F9900883CCA /* DBModel */ = {
@@ -332,12 +361,31 @@
 			productReference = 2D02E4901E0B4A5D006451C7 /* ControlAssistance-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		FD84BFCD2456307100977AFC /* ControlAssistanceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD84BFD72456307100977AFC /* Build configuration list for PBXNativeTarget "ControlAssistanceUITests" */;
+			buildPhases = (
+				FD84BFCA2456307100977AFC /* Sources */,
+				FD84BFCB2456307100977AFC /* Frameworks */,
+				FD84BFCC2456307100977AFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD84BFD42456307100977AFC /* PBXTargetDependency */,
+			);
+			name = ControlAssistanceUITests;
+			productName = ControlAssistanceUITests;
+			productReference = FD84BFCE2456307100977AFC /* ControlAssistanceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
@@ -357,6 +405,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2D02E47A1E0B4A5D006451C7;
+					};
+					FD84BFCD2456307100977AFC = {
+						CreatedOnToolsVersion = 11.4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 				};
 			};
@@ -378,6 +431,7 @@
 				00E356ED1AD99517003FC87E /* ControlAssistanceTests */,
 				2D02E47A1E0B4A5D006451C7 /* ControlAssistance-tvOS */,
 				2D02E48F1E0B4A5D006451C7 /* ControlAssistance-tvOSTests */,
+				FD84BFCD2456307100977AFC /* ControlAssistanceUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -411,6 +465,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2D02E48E1E0B4A5D006451C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD84BFCC2456307100977AFC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -637,6 +698,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FD84BFCA2456307100977AFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD84BFD12456307100977AFC /* ControlAssistanceUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -649,6 +718,11 @@
 			isa = PBXTargetDependency;
 			target = 2D02E47A1E0B4A5D006451C7 /* ControlAssistance-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
+		};
+		FD84BFD42456307100977AFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13B07F861A680F5B00A75B9A /* ControlAssistance */;
+			targetProxy = FD84BFD32456307100977AFC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -967,6 +1041,59 @@
 			};
 			name = Release;
 		};
+		FD84BFD52456307100977AFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ControlAssistanceUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PokedexJorge.ControlAssistanceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ControlAssistance;
+			};
+			name = Debug;
+		};
+		FD84BFD62456307100977AFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ControlAssistanceUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PokedexJorge.ControlAssistanceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ControlAssistance;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1011,6 +1138,15 @@
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
 				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD84BFD72456307100977AFC /* Build configuration list for PBXNativeTarget "ControlAssistanceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD84BFD52456307100977AFC /* Debug */,
+				FD84BFD62456307100977AFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
