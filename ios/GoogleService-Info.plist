@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>902300422659-o0hdl5gfabi8eafpdce4jcggtp4326ab.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.902300422659-o0hdl5gfabi8eafpdce4jcggtp4326ab</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDidpN_d8hW5UIxQrt5_rlf6VSbVwLl3EM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>902300422659</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.reactjs.native.example.ControlAssistance</string>
+	<key>PROJECT_ID</key>
+	<string>controlassistanc-1585369823107</string>
+	<key>STORAGE_BUCKET</key>
+	<string>controlassistanc-1585369823107.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:902300422659:ios:f2f0cfd294db41f0b67436</string>
+	<key>DATABASE_URL</key>
+	<string>https://controlassistanc-1585369823107.firebaseio.com</string>
+</dict>
+</plist>

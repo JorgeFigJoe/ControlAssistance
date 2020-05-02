@@ -13,6 +13,7 @@
 #import "ControlAssistance-Swift.h"
 @import GoogleMaps;
 @import GooglePlaces;
+@import Firebase;
 
 @implementation AppDelegate
 
@@ -30,6 +31,8 @@
 //  rootViewController.view = rootView;
 //  self.window.rootViewController = rootViewController;
 //  [self.window makeKeyAndVisible];
+  
+  [FIRApp configure];
   
   [GMSServices provideAPIKey:@"AIzaSyBYFoLdPfdPlDOrelWbD07KKkifaep6Eus"];
   [GMSPlacesClient provideAPIKey:@"AIzaSyBYFoLdPfdPlDOrelWbD07KKkifaep6Eus"];

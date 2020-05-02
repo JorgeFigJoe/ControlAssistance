@@ -28,6 +28,7 @@
 		FD84BFD12456307100977AFC /* ControlAssistanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD84BFD02456307100977AFC /* ControlAssistanceUITests.swift */; };
 		FD95F582241C8FBA00883CCA /* AssistanceDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD95F581241C8FBA00883CCA /* AssistanceDBModel.swift */; };
 		FD95F585241C916400883CCA /* AssistanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD95F584241C916400883CCA /* AssistanceModel.swift */; };
+		FDEC7A9E245E389F00BB0D16 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDEC7A9D245E389F00BB0D16 /* GoogleService-Info.plist */; };
 		FDEC98AA242F0CEA00A36815 /* ControlMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC98A8242F0CEA00A36815 /* ControlMapViewController.swift */; };
 		FDEC98AB242F0CEA00A36815 /* ControlMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDEC98A9242F0CEA00A36815 /* ControlMapViewController.xib */; };
 /* End PBXBuildFile section */
@@ -95,6 +96,7 @@
 		FD84BFD22456307100977AFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD95F581241C8FBA00883CCA /* AssistanceDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistanceDBModel.swift; sourceTree = "<group>"; };
 		FD95F584241C916400883CCA /* AssistanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistanceModel.swift; sourceTree = "<group>"; };
+		FDEC7A9D245E389F00BB0D16 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FDEC98A8242F0CEA00A36815 /* ControlMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMapViewController.swift; sourceTree = "<group>"; };
 		FDEC98A9242F0CEA00A36815 /* ControlMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ControlMapViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,6 +208,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				FDEC7A9D245E389F00BB0D16 /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* ControlAssistance */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* ControlAssistanceTests */,
@@ -453,6 +456,7 @@
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				FD1459B723EF5A03001D3B26 /* OnboardingViewController.xib in Resources */,
 				FD1459BB23EF6019001D3B26 /* RegisterViewController.xib in Resources */,
+				FDEC7A9E245E389F00BB0D16 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
