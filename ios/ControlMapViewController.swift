@@ -19,6 +19,8 @@ class ControlMapViewController: UIViewController {
   }
   
   @IBOutlet weak var mapView: UIView!
+  @IBOutlet weak var loadingLocationLabel: UILabel!
+  @IBOutlet weak var loadingMapIndicator: UIActivityIndicatorView!
   
   var locationManager: CLLocationManager!
 
@@ -35,6 +37,7 @@ class ControlMapViewController: UIViewController {
   @IBOutlet var itemsSelecction: [UIButton]!
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.loadingMapIndicator.startAnimating()
     }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -101,6 +104,8 @@ extension ControlMapViewController : CLLocationManagerDelegate{
     if mapViewGoogle.isHidden {
       mapViewGoogle.isHidden = false
       mapViewGoogle.camera = camera
+      self.loadingMapIndicator.stopAnimating()
+      self.loadingLocationLabel.isHidden = true
     } else {
       mapViewGoogle.animate(to: camera)
     }

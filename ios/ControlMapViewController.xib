@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ControlMapViewController" customModule="ControlAssistance" customModuleProvider="target">
             <connections>
+                <outlet property="loadingLocationLabel" destination="kUa-eg-JZ4" id="1xM-Fj-2QK"/>
+                <outlet property="loadingMapIndicator" destination="DZN-Z8-vAa" id="JAZ-9q-pT2"/>
                 <outlet property="mapView" destination="upk-LX-ncM" id="9CN-p0-Oku"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="itemsSelecction" destination="t2y-Ak-CHQ" collectionClass="NSMutableArray" id="Svn-rt-Nfu"/>
@@ -83,7 +85,27 @@
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="upk-LX-ncM">
                                     <rect key="frame" x="0.0" y="58" width="414" height="760"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="DZN-Z8-vAa">
+                                            <rect key="frame" x="188.5" y="361.5" width="37" height="37"/>
+                                            <color key="tintColor" red="1" green="0.4941176471" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="color" red="1" green="0.4941176471" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                        </activityIndicatorView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Obteniendo tu ubicación..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUa-eg-JZ4">
+                                            <rect key="frame" x="0.0" y="421" width="414" height="31.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                            <color key="textColor" red="1" green="0.4941176471" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstItem="kUa-eg-JZ4" firstAttribute="leading" secondItem="upk-LX-ncM" secondAttribute="leading" id="R5v-oY-qUS"/>
+                                        <constraint firstItem="DZN-Z8-vAa" firstAttribute="centerY" secondItem="upk-LX-ncM" secondAttribute="centerY" id="nzh-ca-21n"/>
+                                        <constraint firstAttribute="trailing" secondItem="kUa-eg-JZ4" secondAttribute="trailing" id="tyk-r0-irs"/>
+                                        <constraint firstItem="kUa-eg-JZ4" firstAttribute="top" secondItem="DZN-Z8-vAa" secondAttribute="bottom" constant="22.5" id="uC4-41-ccJ"/>
+                                        <constraint firstItem="DZN-Z8-vAa" firstAttribute="centerX" secondItem="upk-LX-ncM" secondAttribute="centerX" id="uHd-hj-USw"/>
+                                    </constraints>
                                 </view>
                             </subviews>
                             <constraints>
