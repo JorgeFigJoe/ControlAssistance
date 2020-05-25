@@ -36,6 +36,7 @@
   
   [GMSServices provideAPIKey:@"AIzaSyBYFoLdPfdPlDOrelWbD07KKkifaep6Eus"];
   [GMSPlacesClient provideAPIKey:@"AIzaSyBYFoLdPfdPlDOrelWbD07KKkifaep6Eus"];
+  FIRFirestore *defaultFirestore = [FIRFirestore firestore];
   
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   OnboardingViewController *mainVC = [[OnboardingViewController alloc] initWithNibName:@"OnboardingViewController" bundle:nil];
