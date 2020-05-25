@@ -18,22 +18,49 @@ class ControlMapViewController: UIViewController {
     case settings = "Configuraciones"
   }
   
-  var placesClient: GMSPlacesClient!
   @IBOutlet weak var mapView: UIView!
+  
+  var locationManager: CLLocationManager!
+
+  var mapViewGoogle: GMSMapView!
+  var placesClient: GMSPlacesClient!
+  var zoomLevel: Float = 15.0
+  
+  // An array to hold the list of likely places.
+   var likelyPlaces: [GMSPlace] = []
+
+   // The currently selected place.
+   var selectedPlace: GMSPlace?
   
   @IBOutlet var itemsSelecction: [UIButton]!
   override func viewDidLoad() {
-        super.viewDidLoad()
-    let camera = GMSCameraPosition.camera(withLatitude: 19.4284706, longitude: -99.1276627, zoom: 80.0)
-    let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
-    self.mapView.addSubview(mapView)
-      
-      let marker = GMSMarker()
-      marker.position = CLLocationCoordinate2D(latitude: 19.4284706, longitude: -99.1276627)
-      marker.title = "CDMX"
-      marker.snippet = "Mexico"
-      marker.map = mapView
+    super.viewDidLoad()
+    self.localizationUser()
+    
+    // Create a map.
+       let camera = GMSCameraPosition.camera(withLatitude: 19.4284706,
+                                             longitude: -99.1276627,
+                                             zoom: zoomLevel)
+       mapViewGoogle = GMSMapView.map(withFrame: self.view.bounds, camera: camera)
+       mapViewGoogle.settings.myLocationButton = true
+       mapViewGoogle.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+       mapViewGoogle.isMyLocationEnabled = true
+
+       // Add the map to the view, hide it until we've got a location update.
+    self.view.addSubview(mapViewGoogle)
+       mapViewGoogle.isHidden = true
     }
+  
+  private func localizationUser(){
+    // Initialize the location manager.
+    locationManager = CLLocationManager()
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    locationManager.requestAlwaysAuthorization()
+    locationManager.distanceFilter = 50
+    locationManager.startUpdatingLocation()
+    locationManager.delegate = self
+    placesClient = GMSPlacesClient.shared()
+  }
 
   
   @IBAction func handlerSelection(_ sender: UIButton) {
@@ -55,5 +82,55 @@ class ControlMapViewController: UIViewController {
     case .settings:
       print("configuraciones")
     }
+  }
+}
+
+extension ControlMapViewController : CLLocationManagerDelegate{
+  // Handle incoming location events.
+  func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    let location: CLLocation = locations.last!
+    print("Location: \(location)")
+
+    let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,
+                                          longitude: location.coordinate.longitude,
+                                          zoom: zoomLevel)
+
+    if mapViewGoogle.isHidden {
+      mapViewGoogle.isHidden = false
+      mapViewGoogle.camera = camera
+    } else {
+      mapViewGoogle.animate(to: camera)
+    }
+    
+//    let marker = GMSMarker()
+//    marker.position = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+//    marker.map = mapViewGoogle
+
+    //listLikelyPlaces()
+  }
+
+  // Handle authorization for the location manager.
+  func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+    switch status {
+    case .restricted:
+      print("Location access was restricted.")
+    case .denied:
+      print("User denied access to location.")
+      // Display the map using the default location.
+      mapView.isHidden = false
+    case .notDetermined:
+      print("Location status not determined.")
+    case .authorizedAlways: fallthrough
+    case .authorizedWhenInUse:
+      print("Location status is OK.")
+    @unknown default:
+      fatalError()
+    }
+  }
+
+  // Handle location manager errors.
+  func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+    locationManager.stopUpdatingLocation()
+    print("Error: \(error)")
   }
 }
