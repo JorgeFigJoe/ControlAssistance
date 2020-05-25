@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,6 +13,7 @@
                 <outlet property="companyTextField" destination="3xk-jI-B15" id="Hs4-7w-9LQ"/>
                 <outlet property="numUsuarioTextField" destination="qQZ-84-ZhV" id="WrC-AB-xaP"/>
                 <outlet property="passwordTextField" destination="aZU-Oo-PIP" id="9YB-2D-2Ul"/>
+                <outlet property="registerScrollView" destination="9wz-xH-YpI" id="Qk0-Op-vZV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

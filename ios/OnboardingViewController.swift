@@ -14,8 +14,6 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
     self.hideKeyboardWhenTappedAround()
     AssistanceDBModel.shared.createDB()
-    NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-    NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
   
   override func viewWillDisappear(_ animated: Bool) {
@@ -23,26 +21,33 @@ class OnboardingViewController: UIViewController {
     NotificationCenter.default.removeObserver(self)
   }
   
-  override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-    self.viewScrollView.contentSize = size
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(true)
+    NotificationCenter.default.addObserver(self, selector: #selector(onKeyboardAppear(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+       NotificationCenter.default.addObserver(self, selector: #selector(onKeyboardDisappear(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
   }
   
-  @objc func keyboardWillShow(notification: NSNotification) {
-      if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-          if self.view.frame.origin.y == 0 {
-              self.view.frame.origin.y -= keyboardSize.height
-          }
-      }
+ @objc func onKeyboardAppear(_ notification: NSNotification) {
+     guard let info = notification.userInfo, let kbSize = (info[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.size else { return }
+     let insets = UIEdgeInsets(top: 0, left: 0, bottom: kbSize.height, right: 0)
+     viewScrollView.contentInset = insets
+     viewScrollView.scrollIndicatorInsets = insets
+ }
+  
+  @objc func onKeyboardDisappear(_ notification: NSNotification) {
+      viewScrollView.contentInset = .zero
+      viewScrollView.scrollIndicatorInsets = .zero
   }
+  
+  override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    print("giro pantalla")
+  }
+  
 
-  @objc func keyboardWillHide(notification: NSNotification) {
-      if self.view.frame.origin.y != 0 {
-          self.view.frame.origin.y = 0
-      }
-  }
 
   @IBAction func registerViewAction(_ sender: Any) {
     let vc = RegisterViewController()
+    vc.modalPresentationStyle = .fullScreen
     self.present(vc, animated: true)
   }
   @IBAction func openMapViewButton(_ sender: Any) {
