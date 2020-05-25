@@ -19,6 +19,7 @@ class OnboardingViewController: UIViewController {
     }
   
   override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(true)
     NotificationCenter.default.removeObserver(self)
   }
   

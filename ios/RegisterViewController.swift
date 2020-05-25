@@ -16,8 +16,8 @@ class RegisterViewController: UIViewController {
   override func viewDidLoad() {
         super.viewDidLoad()
     self.hideKeyboardWhenTappedAround()
-    NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-       NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShowRegister), name: UIResponder.keyboardWillShowNotification, object: nil)
+       NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHideRegister), name: UIResponder.keyboardWillHideNotification, object: nil)
 
     }
   
@@ -30,7 +30,7 @@ class RegisterViewController: UIViewController {
     print("giro pantalla")
   }
   
-  @objc func keyboardWillShow(notification: NSNotification) {
+  @objc func keyboardWillShowRegister(notification: NSNotification) {
       if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
           if self.view.frame.origin.y == 0 {
               self.view.frame.origin.y -= keyboardSize.height
@@ -38,7 +38,7 @@ class RegisterViewController: UIViewController {
       }
   }
 
-  @objc func keyboardWillHide(notification: NSNotification) {
+  @objc func keyboardWillHideRegister(notification: NSNotification) {
       if self.view.frame.origin.y != 0 {
           self.view.frame.origin.y = 0
       }
