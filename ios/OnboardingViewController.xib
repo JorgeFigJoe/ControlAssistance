@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -64,8 +64,8 @@
                                 <constraint firstItem="YaN-BI-gOu" firstAttribute="top" secondItem="yJ7-Gc-AHl" secondAttribute="bottom" constant="28" id="4cc-tE-dIF"/>
                                 <constraint firstItem="Orl-TK-fKr" firstAttribute="top" secondItem="YaN-BI-gOu" secondAttribute="bottom" constant="38" id="4mW-Fq-837"/>
                                 <constraint firstItem="4YR-vQ-oQf" firstAttribute="centerX" secondItem="xj9-ZA-KU8" secondAttribute="centerX" id="8BS-Xd-YPe"/>
-                                <constraint firstAttribute="bottom" secondItem="4YR-vQ-oQf" secondAttribute="bottom" constant="158" id="BjT-Fv-w4C"/>
                                 <constraint firstItem="sWu-Hp-3gj" firstAttribute="leading" secondItem="xj9-ZA-KU8" secondAttribute="leading" constant="37" id="HBu-lg-PC6"/>
+                                <constraint firstAttribute="bottom" secondItem="4YR-vQ-oQf" secondAttribute="bottom" constant="7" id="JkO-cQ-MH1"/>
                                 <constraint firstItem="yJ7-Gc-AHl" firstAttribute="top" secondItem="sWu-Hp-3gj" secondAttribute="bottom" constant="71" id="M41-hn-q56"/>
                                 <constraint firstItem="YaN-BI-gOu" firstAttribute="leading" secondItem="xj9-ZA-KU8" secondAttribute="leading" constant="8" id="P4s-dh-Ast"/>
                                 <constraint firstItem="sWu-Hp-3gj" firstAttribute="centerX" secondItem="xj9-ZA-KU8" secondAttribute="centerX" id="Pcc-Zz-wM7"/>
