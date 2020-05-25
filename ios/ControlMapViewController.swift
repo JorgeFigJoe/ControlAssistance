@@ -35,21 +35,24 @@ class ControlMapViewController: UIViewController {
   @IBOutlet var itemsSelecction: [UIButton]!
   override func viewDidLoad() {
     super.viewDidLoad()
+    }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(true)
     self.localizationUser()
-    
     // Create a map.
        let camera = GMSCameraPosition.camera(withLatitude: 19.4284706,
                                              longitude: -99.1276627,
                                              zoom: zoomLevel)
-       mapViewGoogle = GMSMapView.map(withFrame: self.view.bounds, camera: camera)
+    mapViewGoogle = GMSMapView.map(withFrame: self.mapView.bounds, camera: camera)
        mapViewGoogle.settings.myLocationButton = true
        mapViewGoogle.autoresizingMask = [.flexibleWidth, .flexibleHeight]
        mapViewGoogle.isMyLocationEnabled = true
 
        // Add the map to the view, hide it until we've got a location update.
-    self.view.addSubview(mapViewGoogle)
-       mapViewGoogle.isHidden = true
-    }
+    self.mapView.addSubview(mapViewGoogle)
+    mapViewGoogle.isHidden = true
+  }
   
   private func localizationUser(){
     // Initialize the location manager.
