@@ -19,13 +19,14 @@ class ControlMapViewController: UIViewController {
   }
   
   var placesClient: GMSPlacesClient!
+  @IBOutlet weak var mapView: UIView!
   
   @IBOutlet var itemsSelecction: [UIButton]!
   override func viewDidLoad() {
         super.viewDidLoad()
-      let camera = GMSCameraPosition.camera(withLatitude: 19.4284706, longitude: -99.1276627, zoom: 6.0)
-      let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
-      self.view.addSubview(mapView)
+    let camera = GMSCameraPosition.camera(withLatitude: 19.4284706, longitude: -99.1276627, zoom: 80.0)
+    let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
+    self.mapView.addSubview(mapView)
       
       let marker = GMSMarker()
       marker.position = CLLocationCoordinate2D(latitude: 19.4284706, longitude: -99.1276627)

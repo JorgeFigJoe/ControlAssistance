@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ControlMapViewController" customModule="ControlAssistance" customModuleProvider="target">
             <connections>
+                <outlet property="mapView" destination="upk-LX-ncM" id="9CN-p0-Oku"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="itemsSelecction" destination="t2y-Ak-CHQ" collectionClass="NSMutableArray" id="Svn-rt-Nfu"/>
                 <outletCollection property="itemsSelecction" destination="EtI-oY-0ky" collectionClass="NSMutableArray" id="NaD-nc-hDJ"/>
@@ -25,7 +26,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ASG-pn-dV5">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Shb-Nt-tWS">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -42,7 +43,7 @@
                                     </connections>
                                 </button>
                                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2y-Ak-CHQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <rect key="frame" x="0.0" y="54" width="414" height="50"/>
                                     <color key="backgroundColor" red="1" green="0.4941176471" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="2u3-NF-mvT"/>
@@ -55,7 +56,7 @@
                                     </connections>
                                 </button>
                                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EtI-oY-0ky">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <rect key="frame" x="0.0" y="54" width="414" height="50"/>
                                     <color key="backgroundColor" red="1" green="0.4941176471" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="3Gh-hF-fdF"/>
@@ -68,7 +69,7 @@
                                     </connections>
                                 </button>
                                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VnP-xF-oBl">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <rect key="frame" x="0.0" y="54" width="414" height="50"/>
                                     <color key="backgroundColor" red="1" green="0.4941176471" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="19V-cw-JkG"/>
@@ -80,6 +81,10 @@
                                         <action selector="itemsSelectionButton:" destination="-1" eventType="touchUpInside" id="mGv-37-3na"/>
                                     </connections>
                                 </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="upk-LX-ncM">
+                                    <rect key="frame" x="0.0" y="58" width="414" height="760"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </view>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="VnP-xF-oBl" firstAttribute="leading" secondItem="ASG-pn-dV5" secondAttribute="leading" id="Jeq-5c-bpj"/>
@@ -89,7 +94,10 @@
                                 <constraint firstAttribute="trailing" secondItem="EtI-oY-0ky" secondAttribute="trailing" id="ejJ-zO-Igu"/>
                                 <constraint firstAttribute="trailing" secondItem="Shb-Nt-tWS" secondAttribute="trailing" id="gFf-6a-gcd"/>
                                 <constraint firstAttribute="trailing" secondItem="VnP-xF-oBl" secondAttribute="trailing" id="j87-bl-1Yf"/>
+                                <constraint firstAttribute="trailing" secondItem="upk-LX-ncM" secondAttribute="trailing" id="j8X-eg-PX3"/>
+                                <constraint firstAttribute="bottom" secondItem="upk-LX-ncM" secondAttribute="bottom" id="jx7-DW-sei"/>
                                 <constraint firstItem="t2y-Ak-CHQ" firstAttribute="leading" secondItem="ASG-pn-dV5" secondAttribute="leading" id="qL6-h0-SDh"/>
+                                <constraint firstItem="upk-LX-ncM" firstAttribute="leading" secondItem="ASG-pn-dV5" secondAttribute="leading" id="tnv-NO-GwV"/>
                             </constraints>
                         </stackView>
                     </subviews>
@@ -97,6 +105,7 @@
                     <constraints>
                         <constraint firstItem="ASG-pn-dV5" firstAttribute="leading" secondItem="kHX-vm-D8w" secondAttribute="leading" id="7HT-MQ-2c7"/>
                         <constraint firstItem="ASG-pn-dV5" firstAttribute="top" secondItem="kHX-vm-D8w" secondAttribute="top" id="NtA-oE-63u"/>
+                        <constraint firstAttribute="bottom" secondItem="ASG-pn-dV5" secondAttribute="bottom" id="WOe-qX-h7b"/>
                         <constraint firstAttribute="trailing" secondItem="ASG-pn-dV5" secondAttribute="trailing" id="hm3-pt-uis"/>
                     </constraints>
                 </view>
