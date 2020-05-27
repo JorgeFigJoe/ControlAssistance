@@ -47,6 +47,7 @@ class RegisterViewController: UIViewController {
     guard let password = passwordTextField.text else {return}
     guard let company = companyTextField.text else {return}
     AssistanceDBModel.shared.insertDatesToDBModel(getName: name, getCompany: company, getPass: password)
+    EmpleadosFireStoreDB.sharedInstance.createUserDataBaseFireBase(name: name, Company: company, Password: password)
     self.dismiss(animated: true, completion: nil)
   }
   @IBAction func exitButtonAction(_ sender: Any) {
