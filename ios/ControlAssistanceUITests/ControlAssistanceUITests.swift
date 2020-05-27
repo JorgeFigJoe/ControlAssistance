@@ -36,6 +36,57 @@ class ControlAssistanceUITests: XCTestCase {
     
   }
   
+  func testLogin2(){
+    
+    let app = XCUIApplication()
+    app/*@START_MENU_TOKEN@*/.textFields["Ingresa tu usuario"]/*[[".scrollViews.textFields[\"Ingresa tu usuario\"]",".textFields[\"Ingresa tu usuario\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    
+    let aKey = app/*@START_MENU_TOKEN@*/.keys["a"]/*[[".keyboards.keys[\"a\"]",".keys[\"a\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+    aKey.tap()
+    
+    let moreKey = app/*@START_MENU_TOKEN@*/.keys["more"]/*[[".keyboards",".keys[\"números\"]",".keys[\"more\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/
+    moreKey.tap()
+    
+    let key = app/*@START_MENU_TOKEN@*/.keys["@"]/*[[".keyboards.keys[\"@\"]",".keys[\"@\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+    key.tap()
+    
+    let moreKey2 = app/*@START_MENU_TOKEN@*/.keys["more"]/*[[".keyboards",".keys[\"letras\"]",".keys[\"more\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/
+    moreKey2.tap()
+    
+    let bKey = app/*@START_MENU_TOKEN@*/.keys["b"]/*[[".keyboards.keys[\"b\"]",".keys[\"b\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+    bKey.tap()
+    moreKey.tap()
+    
+    let key2 = app/*@START_MENU_TOKEN@*/.keys["."]/*[[".keyboards.keys[\".\"]",".keys[\".\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+    key2.tap()
+    moreKey2.tap()
+    
+    let cKey = app/*@START_MENU_TOKEN@*/.keys["c"]/*[[".keyboards.keys[\"c\"]",".keys[\"c\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+    cKey.tap()
+    
+    let squareAndPencilScrollView = app/*@START_MENU_TOKEN@*/.scrollViews.containing(.image, identifier:"square.and.pencil").element/*[[".scrollViews.containing(.other, identifier:\"Barra de desplazamiento horizontal, 1 página\").element",".scrollViews.containing(.other, identifier:\"Barra de desplazamiento vertical, 2 páginas\").element",".scrollViews.containing(.button, identifier:\"¿No tienes cuenta? Registrate\").element",".scrollViews.containing(.button, identifier:\"Iniciar Sesión\").element",".scrollViews.containing(.secureTextField, identifier:\"Ingresa tu contraseña\").element",".scrollViews.containing(.textField, identifier:\"Ingresa tu usuario\").element",".scrollViews.containing(.image, identifier:\"square.and.pencil\").element"],[[[-1,6],[-1,5],[-1,4],[-1,3],[-1,2],[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+    squareAndPencilScrollView.tap()
+    app/*@START_MENU_TOKEN@*/.secureTextFields["Ingresa tu contraseña"]/*[[".scrollViews.secureTextFields[\"Ingresa tu contraseña\"]",".secureTextFields[\"Ingresa tu contraseña\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    moreKey.tap()
+    
+    let key3 = app/*@START_MENU_TOKEN@*/.keys["1"]/*[[".keyboards.keys[\"1\"]",".keys[\"1\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+    key3.tap()
+    
+    let key4 = app/*@START_MENU_TOKEN@*/.keys["2"]/*[[".keyboards.keys[\"2\"]",".keys[\"2\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+    key4.tap()
+    
+    let key5 = app/*@START_MENU_TOKEN@*/.keys["3"]/*[[".keyboards.keys[\"3\"]",".keys[\"3\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+    key5.tap()
+    
+    let key6 = app/*@START_MENU_TOKEN@*/.keys["4"]/*[[".keyboards.keys[\"4\"]",".keys[\"4\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+    key6.tap()
+    squareAndPencilScrollView.tap()
+    
+    let iniciarSesiNStaticText = app/*@START_MENU_TOKEN@*/.buttons["Iniciar Sesión"]/*[[".scrollViews.buttons[\"Iniciar Sesión\"]",".buttons[\"Iniciar Sesión\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.staticTexts["Iniciar Sesión"]
+    iniciarSesiNStaticText.tap()
+    self.testUpdateLocation()
+  }
+  
   func testLogin(){
     let app = XCUIApplication()
     app/*@START_MENU_TOKEN@*/.textFields["Ingresa tu usuario"]/*[[".scrollViews.textFields[\"Ingresa tu usuario\"]",".textFields[\"Ingresa tu usuario\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
@@ -74,6 +125,21 @@ class ControlAssistanceUITests: XCTestCase {
     key3.tap()
     app/*@START_MENU_TOKEN@*/.scrollViews.containing(.image, identifier:"square.and.pencil").element/*[[".scrollViews.containing(.other, identifier:\"Horizontal scroll bar, 1 page\").element",".scrollViews.containing(.other, identifier:\"Vertical scroll bar, 1 page\").element",".scrollViews.containing(.button, identifier:\"¿No tienes cuenta? Registrate\").element",".scrollViews.containing(.button, identifier:\"Iniciar Sesión\").element",".scrollViews.containing(.secureTextField, identifier:\"Ingresa tu contraseña\").element",".scrollViews.containing(.textField, identifier:\"Ingresa tu usuario\").element",".scrollViews.containing(.image, identifier:\"square.and.pencil\").element"],[[[-1,6],[-1,5],[-1,4],[-1,3],[-1,2],[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
     app/*@START_MENU_TOKEN@*/.buttons["Iniciar Sesión"]/*[[".scrollViews.buttons[\"Iniciar Sesión\"]",".buttons[\"Iniciar Sesión\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.staticTexts["Iniciar Sesión"].tap()
+    self.testUpdateLocation()
+  }
+  
+  func testUpdateLocation(){
+    sleep(2)
+    let app = XCUIApplication()
+    let menuButton = app.buttons["MENU"]
+    menuButton.tap()
+    app.buttons["Ingresar ubicación"].tap()
+    app.alerts.scrollViews.otherElements.buttons["Aceptar"].tap()
+    menuButton.tap()
+    menuButton.tap()
+    sleep(2)
+    app.buttons["Cerrar sesión"].tap()
+    
   }
   
   func testCreateACount(){
@@ -132,7 +198,7 @@ class ControlAssistanceUITests: XCTestCase {
     app/*@START_MENU_TOKEN@*/.buttons["Crear cuenta"]/*[[".scrollViews.buttons[\"Crear cuenta\"]",".buttons[\"Crear cuenta\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.staticTexts["Crear cuenta"].tap()
     
     sleep(1)
-    self.testLogin()
+    self.testLogin2()
     
   }
 
