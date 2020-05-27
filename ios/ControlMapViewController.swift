@@ -15,7 +15,7 @@ class ControlMapViewController: UIViewController {
   enum items : String{
     case ubication = "Ingresar ubicación"
     case avisos = "Aviso para llegar tarde"
-    case settings = "Configuraciones"
+    case logout = "Cerrar sesión"
   }
   
   @IBOutlet weak var mapView: UIView!
@@ -23,10 +23,10 @@ class ControlMapViewController: UIViewController {
   @IBOutlet weak var loadingMapIndicator: UIActivityIndicatorView!
   
   var locationManager: CLLocationManager!
-  var latituteLocation : Double = 0.0
-  var longitudLocation : Double = 0.0
+  var latituteLocation : Double?
+  var longitudLocation : Double?
   
-  var collectionName : String = ""
+  var collectionName : String?
 
   var mapViewGoogle: GMSMapView!
   var placesClient: GMSPlacesClient!
@@ -89,15 +89,21 @@ class ControlMapViewController: UIViewController {
       self.showAlert()
     case .avisos:
       print("Avisos")
-    case .settings:
-      print("configuraciones")
+    case .logout:
+      self.latituteLocation = nil
+      self.longitudLocation = nil
+      self.collectionName = nil
+      self.dismiss(animated: true, completion: nil)
     }
   }
   
   private func showAlert(){
     let alert = UIAlertController(title: nil, message: "¿Deseas registrar tu ubicación?", preferredStyle: .alert)
     let actionOk = UIAlertAction(title: "Aceptar", style: .default){(action : UIAlertAction) in
-      EmpleadosFireStoreDB.sharedInstance.updateDocument(nameCollection: self.collectionName, updateLatitud: self.latituteLocation, updateLongitud: self.longitudLocation)
+      guard let latitude = self.latituteLocation else {return}
+      guard let longitud = self.longitudLocation else {return}
+      guard let collectionNewName = self.collectionName else {return}
+      EmpleadosFireStoreDB.sharedInstance.updateDocument(nameCollection: collectionNewName, updateLatitud: latitude, updateLongitud: longitud)
     }
     let actionCancel = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
     alert.addAction(actionCancel)

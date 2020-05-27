@@ -53,9 +53,11 @@ class OnboardingViewController: UIViewController {
     self.present(vc, animated: true)
   }
   @IBAction func openMapViewButton(_ sender: Any) {
-    guard let name = nameUserSession.text else {return}
-    guard let pass = passUserSession.text else {return}
+    guard let name = self.nameUserSession.text else {return}
+    guard let pass = self.passUserSession.text else {return}
     let vc = ControlMapViewController()
+    self.nameUserSession.text = ""
+    self.passUserSession.text = ""
     vc.collectionName = name+"_"+pass
     vc.modalPresentationStyle = .fullScreen
     self.present(vc, animated: true)

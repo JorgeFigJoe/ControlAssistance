@@ -76,7 +76,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="19V-cw-JkG"/>
                                     </constraints>
-                                    <state key="normal" title="Configuraciones">
+                                    <state key="normal" title="Cerrar sesión">
                                         <color key="titleColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
