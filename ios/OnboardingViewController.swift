@@ -10,6 +10,8 @@ import UIKit
 
 class OnboardingViewController: UIViewController {
   @IBOutlet weak var viewScrollView: UIScrollView!
+  @IBOutlet weak var nameUserSession: UITextField!
+  @IBOutlet weak var passUserSession: UITextField!
   override func viewDidLoad() {
         super.viewDidLoad()
     self.hideKeyboardWhenTappedAround()
@@ -51,7 +53,10 @@ class OnboardingViewController: UIViewController {
     self.present(vc, animated: true)
   }
   @IBAction func openMapViewButton(_ sender: Any) {
+    guard let name = nameUserSession.text else {return}
+    guard let pass = passUserSession.text else {return}
     let vc = ControlMapViewController()
+    vc.collectionName = name+"_"+pass
     vc.modalPresentationStyle = .fullScreen
     self.present(vc, animated: true)
   }

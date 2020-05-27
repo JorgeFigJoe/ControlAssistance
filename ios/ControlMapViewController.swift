@@ -23,6 +23,10 @@ class ControlMapViewController: UIViewController {
   @IBOutlet weak var loadingMapIndicator: UIActivityIndicatorView!
   
   var locationManager: CLLocationManager!
+  var latituteLocation : Double = 0.0
+  var longitudLocation : Double = 0.0
+  
+  var collectionName : String = ""
 
   var mapViewGoogle: GMSMapView!
   var placesClient: GMSPlacesClient!
@@ -82,12 +86,24 @@ class ControlMapViewController: UIViewController {
     guard let title = sender.currentTitle, let item = items(rawValue: title) else {return}
     switch item {
     case .ubication:
-      print("Ubicación")
+      self.showAlert()
     case .avisos:
       print("Avisos")
     case .settings:
       print("configuraciones")
     }
+  }
+  
+  private func showAlert(){
+    let alert = UIAlertController(title: nil, message: "¿Deseas registrar tu ubicación?", preferredStyle: .alert)
+    let actionOk = UIAlertAction(title: "Aceptar", style: .default){(action : UIAlertAction) in
+      EmpleadosFireStoreDB.sharedInstance.updateDocument(nameCollection: self.collectionName, updateLatitud: self.latituteLocation, updateLongitud: self.longitudLocation)
+    }
+    let actionCancel = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+    alert.addAction(actionCancel)
+    alert.addAction(actionOk)
+    self.present(alert, animated: true, completion: nil)
+    
   }
 }
 
@@ -100,6 +116,9 @@ extension ControlMapViewController : CLLocationManagerDelegate{
     let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,
                                           longitude: location.coordinate.longitude,
                                           zoom: zoomLevel)
+    //Actualiza la localizacion
+    self.latituteLocation = location.coordinate.latitude
+    self.longitudLocation = location.coordinate.longitude
 
     if mapViewGoogle.isHidden {
       mapViewGoogle.isHidden = false

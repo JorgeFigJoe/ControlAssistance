@@ -18,16 +18,16 @@ class EmpleadosFireStoreDB {
   
   func createUserDataBaseFireBase(name : String, Company : String, Password : String){
     let newDocumentUser = db.collection(nameCollection)
-    newDocumentUser.document(name+"_"+Company).setData([
+    newDocumentUser.document(name+"_"+Password).setData([
       "name":name,
       "company":Company,
       "password":Password,
-      "latitud":0,
-      "longitud":0])
+      "latitud":1.1,
+      "longitud":1.1])
   }
   
-  func updateDocument(nameCollection : String, updateLatitud : Int, updateLongitud : Int){
-    let collection = db.collection(nameCollection).document(nameCollection)
+  func updateDocument(nameCollection : String, updateLatitud : Double, updateLongitud : Double){
+    let collection = db.collection(self.nameCollection).document(nameCollection)
     
     collection.updateData([
         "latitud": updateLatitud,
