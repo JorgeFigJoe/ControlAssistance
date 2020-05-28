@@ -90,11 +90,23 @@ class ControlMapViewController: UIViewController {
     case .avisos:
       print("Avisos")
     case .logout:
+      self.logaoutShowAlert()
+      
+    }
+  }
+  
+  private func logaoutShowAlert(){
+    let alert = UIAlertController(title: nil, message: "¿Deseas finalizar tu sesión?", preferredStyle: .alert)
+    let actionOk = UIAlertAction(title: "Aceptar", style: .default){(action : UIAlertAction) in
       self.latituteLocation = nil
       self.longitudLocation = nil
       self.collectionName = nil
       self.dismiss(animated: true, completion: nil)
     }
+    let actionCancel = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+    alert.addAction(actionCancel)
+    alert.addAction(actionOk)
+    self.present(alert, animated: true, completion: nil)
   }
   
   private func showAlert(){
